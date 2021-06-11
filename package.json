@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "dependencies": {
+    "@onflow/fcl": "^0.0.71",
+    "@onflow/types": "^0.0.4",
+    "@types/elliptic": "^6.4.12",
+    "elliptic": "^6.5.4",
+    "sha3": "^2.1.4",
+    "ts-node": "^9.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
+}
