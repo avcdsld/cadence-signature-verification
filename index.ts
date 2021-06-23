@@ -6,7 +6,6 @@ import { ec as EC } from 'elliptic';
 import { SHA3 } from 'sha3';
 
 const ec: EC = new EC('p256'); // or 'secp256k1'
-const sha = new SHA3(256);
 
 const toBytesWithTag = (str: string) => {
   // Tag: '464c4f572d56302e302d75736572000000000000000000000000000000000000'
@@ -18,6 +17,7 @@ const toBytesWithTag = (str: string) => {
 }
 
 const hashMsg = (msg: string) => {
+  const sha = new SHA3(256);
   return sha.update(toBytesWithTag(msg)).digest();
 };
 
