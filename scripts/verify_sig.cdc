@@ -27,7 +27,7 @@ pub fun main(rawPublicKeys: [String], weights: [UFix64], signatures: [String], s
     j = j + 1
   }
 
-  return keyList.isValid(
+  return keyList.verify(
     signatureSet: signatureSet,
     signedData: signedData.decodeHex(),
   )
